@@ -9,7 +9,7 @@ function $$(selector, context = document) {
 // 페이지 정보 배열
 const pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
+  { url: 'projects/', title: '★★★Projects2' },
   { url: 'contact/', title: 'Contact' },
   { url: 'resume/', title: '★CV & Resume' },
   { url: 'https://github.com/samsooseo', title: 'GitHub' }
@@ -181,6 +181,7 @@ export async function fetchGitHubData(samsooseo) {
   const projects = await fetchJSON('../lib/projects.json');
   const latestProjects = projects.slice(0, 3);
   renderProjects(latestProjects, projectsContainer, 'h3');
+  
 
   // GitHub 사용자 정보 가져오기
   const githubData = await fetchJSON('https://api.github.com/users/SAMSOOSEO');

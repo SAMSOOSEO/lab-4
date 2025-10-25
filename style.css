@@ -80,9 +80,8 @@ button {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em;
-  /* article 간 간격 */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
 }
 
 .projects article {
@@ -170,3 +169,21 @@ a:hover {
   grid-row: 2; 
 }
 
+
+.projects-description {
+  font-size: 1.0em;
+  line-height: 1.6;
+  color: var(--text-color, inherit);
+  margin: 1rem 0 2rem;
+  padding-left: 1.2em;
+}
+.projects-description::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background: var(--color-accent, #666);
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+}
